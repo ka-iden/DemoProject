@@ -15,7 +15,9 @@ My demo project is a rough Java-based 3D OpenGL application that demonstrates a 
      ```sh
      ./gradlew shadowJar
      ```
-4. Navigate to `./app/build/libs` ((here)[./app/build/libs/]) and open a terminal and run `java -jar app-all.jar`
+4. Navigate to `./app/build/libs` ([here](./app/build/libs/)) and open a terminal and run `java -jar app-all.jar`
+
+Prebuilt JARs are available in the on my github [here](https://github.com/ka-iden/DemoProject/releases/latest). You can run it the same way as step 4, but without having to navigate to the folder listed above.
 
 ## Controls
 - WASD movement, alongside Q and E to move up and down.
