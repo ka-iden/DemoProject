@@ -26,14 +26,11 @@ dependencies {
     implementation libs.guava
     implementation platform("org.lwjgl:lwjgl-bom:$lwjglVersion")
 
-    implementation 'org.joml:joml:1.10.8'
-
+    implementation "org.joml:joml:${jomlVersion}"
 	implementation "org.lwjgl:lwjgl"
 	implementation "org.lwjgl:lwjgl-glfw"
 	implementation "org.lwjgl:lwjgl-opengl"
 	implementation "org.lwjgl:lwjgl-stb"
-
-    implementation "org.joml:joml:${jomlVersion}"
 
 	runtimeOnly "org.lwjgl:lwjgl::$lwjglNatives"
 	runtimeOnly "org.lwjgl:lwjgl-glfw::$lwjglNatives"
@@ -65,6 +62,13 @@ test {
 }
 
 shadowJar {
+    dependencies {
+        include(dependency('org.lwjgl:lwjgl'))
+        include(dependency('org.lwjgl:lwjgl-glfw'))
+        include(dependency('org.lwjgl:lwjgl-opengl'))
+        include(dependency('org.lwjgl:lwjgl-stb'))
+        include(dependency('org.joml:joml'))
+    }
     manifest {
         attributes 'Main-Class': 'demoproject.App'
     }

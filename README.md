@@ -9,10 +9,12 @@ My demo project is a rough Java-based 3D OpenGL application that demonstrates a 
 3. Navigate to the project directory and build the project using Gradle:
   - Windows:
     ```sh
+    ./gradlew.bat build
     ./gradlew.bat shadowJar
     ```
    - Mac/Linux:
      ```sh
+     ./gradlew build
      ./gradlew shadowJar
      ```
 4. Navigate to `./app/build/libs` ([here](./app/build/libs/)) and open a terminal and run `java -jar app-all.jar`
